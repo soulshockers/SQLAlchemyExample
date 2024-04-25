@@ -25,8 +25,7 @@ address2 = Address(country='Ukraine', street='456 Elm St', city='Riverside', zip
 user2.addresses.append(address2)
 
 # Add the users and addresses to the session
-session.add(user1)
-session.add(user2)
+session.add_all([user1, user2])
 session.commit()
 
 # Query the database
